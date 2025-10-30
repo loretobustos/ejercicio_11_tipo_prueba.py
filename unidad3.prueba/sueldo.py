@@ -19,5 +19,19 @@ class Sueldo(Empleado):
     def listaCargo(self, lista):
         cargo=input("Cargo a listar: ").ipper()
         print("Las personas que cumplen el cargo son: ")
+        sww=True
         for item in lista: 
-            if item.cargo
+            if item.cargo.upper()==cargo:
+                print("\t-",item.apellidos,", ",item.nombres)
+                sww=False
+        if sww:
+            print("No hay personas que ejerzan ese cargo", cargo)
+
+
+    def listarJornadaManana(self, lista):
+        listaJornada=[]
+        for item in lista:
+            if item.horario.jornada==1:
+                listaJornada.append([item.apellidos,item.nombres])
+                print("\t-",item.apellidos,",",item.nombres)
+        return listaJornada
