@@ -12,4 +12,12 @@ class Sueldo(Empleado):
         print("Suelde Base       :",self.sueldoBase)
         print("Bono              :",self.bono)
         print("Motivo            :",self.motivo)
-       
+
+    def __str__(self) -> str:
+        return super().__str__()
+
+    def listaCargo(self, lista):
+        cargo=input("Cargo a listar: ").ipper()
+        print("Las personas que cumplen el cargo son: ")
+        for item in lista: 
+            if item.cargo
